@@ -1,0 +1,10 @@
+button[type=submit] {
+    background-color: rgba(18, 133, 89, 255);
+    font: inherit;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 12px 40px;
+    text-decoration: none;
+    cursor: pointer;
+}

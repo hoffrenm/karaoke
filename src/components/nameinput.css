@@ -1,0 +1,11 @@
+.name-input {
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 100%;
+    min-width: 340px;
+    height: 60px;
+    padding-left: 16px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    font-size: medium;
+}
