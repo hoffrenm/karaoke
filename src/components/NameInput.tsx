@@ -4,7 +4,12 @@ const NameInput = () => {
     return (
         <div className="input-wrapper">
             <label htmlFor="name">Nimi tai nimimerkki*</label>
-            <input className="name-input" type="text" id="name" name="name" />
+            <input
+                required
+                className="name-input"
+                type="text"
+                id="name"
+                name="name" />
         </div>
     )
 }

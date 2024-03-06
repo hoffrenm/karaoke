@@ -7,8 +7,8 @@ const PitchSelection = () => {
             <div className="radiogroup-container">
                 <label className="radiobutton-container">
                     <input
+                        required
                         type="radio"
-                        defaultChecked={true}
                         name="pitch"
                         value={-2}
                     />

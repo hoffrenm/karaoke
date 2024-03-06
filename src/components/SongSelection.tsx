@@ -51,12 +51,13 @@ const SongSelection = () => {
                 </div>
             ) : (
                 <select
+                    required
                     onChange={(event) => handleSomething(event)}
                     name="song"
                     id="song">
                     <option value="" disabled selected hidden>Valitse alta</option>
                     {songList.map(song =>
-                        <option key={song}>{song}</option>
+                        <option key={song} value={song}>{song}</option>
                     )}
                     <option value="open">+ Lisää biisi</option>
                 </select>

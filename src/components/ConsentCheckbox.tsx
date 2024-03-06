@@ -8,7 +8,7 @@ const ConsentCheckbox = () => {
                 <p style={{ padding: "5px 0px 0px 10px" }}>
                     Sallin tietojeni tallennuksen karaokejärjestelmään
                 </p>
-                <input type="checkbox" />
+                <input required type="checkbox" />
                 <span className="custom-checkbox" />
             </label>
         </div >
