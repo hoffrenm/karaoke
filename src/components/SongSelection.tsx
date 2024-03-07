@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { ReactElement, ReactNode, useState } from "react"
 import "./songselection.css"
 
 const SongSelection = () => {
-    const [songList, setSongList] = useState<string[]>([])
+    const [songList, setSongList] = useState<string[]>(["Antti Tuisku", "David Bowie", "Kari Tapio"])
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [newSong, setNewSong] = useState<string>("")
 
@@ -20,18 +20,19 @@ const SongSelection = () => {
     }
 
     // This is done because Edge and Chrome dont like click events on option
-    const handleSomething = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        if (event.target.value == "open") {
+    const handleOptionClick = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        if (event.target.value === "add") {
             setIsOpen(true)
         }
     }
 
     return (
         <div className="input-wrapper">
-            <label>Biisi*</label>
+            <label htmlFor="song">Biisi*</label>
             {isOpen ? (
                 <div className="add-song-wrapper">
                     <input
+                        required
                         className="song-input"
                         onChange={handleNewSongChange}
                         autoFocus placeholder="Lisää biisi"
@@ -45,26 +46,23 @@ const SongSelection = () => {
                     </button>
                     <button
                         className="button-cancel"
-                        onClick={() => setIsOpen(false)}>
-                        X
-                    </button>
+                        onClick={() => setIsOpen(false)}
+                    >x</button>
                 </div>
             ) : (
                 <select
                     required
-                    onChange={(event) => handleSomething(event)}
+                    onChange={handleOptionClick}
                     name="song"
-                    id="song">
-                    <option value="" disabled selected hidden>Valitse alta</option>
-                    {songList.map(song =>
-                        <option key={song} value={song}>{song}</option>
-                    )}
-                    <option value="open">+ Lisää biisi</option>
+                    id="song"
+                >
+                    <option value="" disabled hidden selected>Valitse alta</option>
+                    {songList.map((song) => <option key={song} value={song}>{song}</option>)}
+                    <option value="add">+ Lisää oma biisi</option>
                 </select>
             )}
-        </div>
+        </div >
     )
-
 }
 
 export default SongSelection

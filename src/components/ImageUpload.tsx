@@ -22,7 +22,7 @@ const ImageUpload = () => {
                         <button
                             className="remove-image-button"
                             onClick={() => setSelectedImage(undefined)}
-                        >X</button>
+                        >x</button>
                     </div>
                     :
                     <div>
@@ -35,7 +35,6 @@ const ImageUpload = () => {
                         <input
                             onChange={onFileChange}
                             id="profilepic"
-                            name="profilepic"
                             type="file"
                             ref={inputRef}
                             style={{ display: 'none' }}

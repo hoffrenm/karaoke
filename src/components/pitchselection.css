@@ -36,6 +36,10 @@ input[type="radio"] {
     box-sizing: border-box
 }
 
+.custom-radiobutton:hover {
+    background-color: #e6e6e6;
+}
+
 .radiobutton-container input:checked~.custom-radiobutton {
     background-color: rgba(18, 133, 89, 255);
     color: #ffffff;

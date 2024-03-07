@@ -11,4 +11,5 @@ label {
 .input-wrapper {
   background-color: #ffffff;
   margin: 0 0 10px 0;
+  min-height: 95px;
 }

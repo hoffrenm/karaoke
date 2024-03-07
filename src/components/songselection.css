@@ -3,6 +3,7 @@ select {
     min-width: 340px;
     height: 60px;
     padding: 12px 20px;
+    margin-top: 6px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: medium;

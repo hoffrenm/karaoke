@@ -8,13 +8,14 @@ const PitchSelection = () => {
                 <label className="radiobutton-container">
                     <input
                         required
+                        defaultChecked
                         type="radio"
                         name="pitch"
                         value={-2}
                     />
                     <div
                         className="custom-radiobutton"
-                        style={{ borderRadius: "10px 0px 0px 10px" }}
+                        style={{ borderRadius: "8px 0px 0px 8px" }}
                     >-2</div>
                 </label>
                 <label className="radiobutton-container">
@@ -36,7 +37,6 @@ const PitchSelection = () => {
                 <label className="radiobutton-container">
                     <input
                         type="radio"
-
                         name="pitch"
                         value={1}
                     />
@@ -50,7 +50,7 @@ const PitchSelection = () => {
                     />
                     <div
                         className="custom-radiobutton"
-                        style={{ borderRadius: "0px 6px 6px 0px" }}
+                        style={{ borderRadius: "0px 8px 8px 0px" }}
                     >+2</div>
                 </label>
             </div>
